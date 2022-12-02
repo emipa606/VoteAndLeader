@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <val_elecCycle_t>Election cycle (days)</val_elecCycle_t>
+  <val_elecCycle_d>Every X days, a new leader is elected.</val_elecCycle_d>
+  <letter_candiList_t>Election Candidate</letter_candiList_t>
+  <letter_candiList_d>-- Candidates --\n{0}\n-- Denied --\n{1}\n\nAfter a few days of voting, the results will be announced.</letter_candiList_d>
+  <letter_election_t>Voting Result</letter_election_t>
+  <letter_election_d>+ New Leader: {0}\n+ Candidate Ranking: {1}\n\n[Vote] &gt;&gt;&gt;&gt;&gt; [Vote Target]\n\n{2}\n\nThe settlement will be ruled by {0} for {3} days.</letter_election_d>
+  <letter_assist_t>Role Assignment</letter_assist_t>
+  <letter_assist_d>{0} has assigned the desired person to all roles.\nhave assigned the highest possible position to the person like.\n\n{1}</letter_assist_d>
+  <letter_elecFail_t>Election fail</letter_elecFail_t>
+  <letter_elecFail_d>Because there are fewer than {0} colonists, the election has been canceled.</letter_elecFail_d>
+  <letter_elecFail_noCandi_d>Voting cannot proceed because the candidate has disappeared.</letter_elecFail_noCandi_d>
+  <systemEffectVote># Since we are currently under the {1} system of {0}, the next person has more votes.\n{2}</systemEffectVote>
+  <c_mental>Mental break</c_mental>
+  <c_lowMood>Low mood</c_lowMood>
+  <c_noInterest>No interested</c_noInterest>
+  <c_guilt>Criminal</c_guilt>
+  <reason>Reason</reason>
+  <r_impossible>impossible</r_impossible>
+  <r_ideoSelf>own ideoligion</r_ideoSelf>
+  <r_self>myself</r_self>
+  <r_opinion>intimacy</r_opinion>
+  <r_social>social skill</r_social>
+  <r_family>family</r_family>
+  <r_love>lover</r_love>
+  <r_ideo>same ideo</r_ideo>
+  <r_maleSup>male suprem</r_maleSup>
+  <r_femaleSup>female suprem</r_femaleSup>
+  <c_noCollect>No suitable person</c_noCollect>
+  <vote>vote</vote>
+  <Leader>Leader</Leader>
+</LanguageData>

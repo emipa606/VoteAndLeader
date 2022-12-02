@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>VOTE and LEADER (Continued)</name>
+  <packageId>Mlie.VOTEAndLEADER</packageId>
+  <author>YAYO</author>
+  <url>https://github.com/emipa606/VOTEAndLEADER</url>
+  <supportedVersions>
+    <li>1.3</li>
+    <li>1.4</li>
+  </supportedVersions>
+  <modDependencies>
+    <li>
+      <packageId>brrainz.harmony</packageId>
+      <displayName>Harmony</displayName>
+      <steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
+      <downloadUrl>https://github.com/pardeike/HarmonyRimWorld/releases/latest</downloadUrl>
+    </li>
+    <li>
+      <packageId>Ludeon.Rimworld.Ideology</packageId>
+      <displayName>Rimworld Ideology</displayName>
+      <downloadUrl>https://store.steampowered.com/app/1392840/RimWorld__Ideology/</downloadUrl>
+    </li>
+    <li>
+      <packageId>UnlimitedHugs.HugsLib</packageId>
+      <displayName>HugsLib</displayName>
+      <steamWorkshopUrl>steam://url/CommunityFilePage/818773962</steamWorkshopUrl>
+      <downloadUrl>https://github.com/UnlimitedHugs/RimworldHugsLib/releases/latest</downloadUrl>
+    </li>
+  </modDependencies>
+  <loadAfter>
+    <li>brrainz.harmony</li>
+    <li>Ludeon.Rimworld.Ideology</li>
+    <li>UnlimitedHugs.HugsLib</li>
+  </loadAfter>
+  <description>[img]https://i.imgur.com/buuPQel.png[/img]
+Update of YAYOs mod
+https://steamcommunity.com/sharedfiles/filedetails/?id=2561949131
+
+[img]https://i.imgur.com/pufA0kM.png[/img]
+
+[table]
+    [tr]
+        [td][url=https://invite.gg/Mlie][img]https://i.imgur.com/zdzzBrc.png[/img][/url][/td]
+        [td][url=https://github.com/emipa606/VOTEAndLEADER][img]https://i.imgur.com/kTkpTOE.png[/img][/url][/td]
+    [/tr]
+    [tr]
+        [td][img]https://i.imgur.com/WjDSfUn.png[/img][/td]
+        [td][img]https://i.imgur.com/Be8E2qJ.png[/img][/td]
+    [/tr]
+[/table]
+	
+[img]https://i.imgur.com/Z4GOv8H.png[/img]
+[h1][b]# A new leader is elected every 60 days. (can change in option)[/b][/h1]
+
+[b]- Pawns vote carefully according to pawn's ideoligion, social skill, intimacy, family relationship, romantic relationship, same or different ideology, and criminal status.
+
+- Two days after a leader is elected, The leader will assign the desired person to the remaining positions.
+(or, you can use the leader's assign roles ability to assign immediately.)
+
+- You can no longer manually assign positions to pawns.
+
+- The first voting will take place after the 15th. (need 3 colonists)
+
+- The number of available votes for pawns increases according to the leader's ideoligion.[/b]
+
+
+
+[img]https://imgur.com/LUMpSWD.png[/img]
+
+[img]https://imgur.com/N1KMEjm.png[/img]
+
+
+
+
+[h1][b]# ideological effect[/b][/h1]
+
+[b]When the leader's ideology has a meme[/b]
+
+- Collectivist : Leader can use (Colonist Count x 25%) more votes.
+- Proselytizer : All moral guide can use 1 more vote.
+- MaleSupremacy : All male can use 1 more vote.
+- FemaleSupremacy : All female can use 1 more vote.
+
+[b]When the colonist's ideology has a meme[/b]
+
+- Collectivist : Want to hire a leader as a leader.
+- Proselytizer : Want to hire people with the same ideology as leaders.
+- MaleSupremacy : Want to hire a male as a leader. If pawn is female, will not be a candidate.
+- FemaleSupremacy : Want to hire a female as a leader. If pawn is male, will not be a candidate.
+
+
+[list][*] The latest news about my mods are posted on YouTube.
+Subscribe to YouTube and be the first to know.[/list]
+[url=https://www.youtube.com/channel/UCfrw-AKo2Ax-TnDXNmhE28w][list]Yayo's Youtube[/list]
+[list][img]https://imgur.com/vGVHUDk.png[/img][/list][/url]
+
+
+[url=https://ko-fi.com/kr_yayo][img]https://i.imgur.com/d6Vx7Sj.png[/img][/url]
+I'm very erratic and I cannot update this in return for a donation.
+If you'd like to donate for something you're currently enjoying with the mod, I'd appreciate it.
+
+
+
+
+[h1][b]# Ideas not yet developed[/b][/h1]
+
+[b]- Vote for guilty and execution
+- Dissatisfaction with the leader and revolution
+- Dictator Appearance Event[/b]
+
+
+
+
+Please take this mod and modify it. The source code is included.
+I'd love to see variations come out with various ideas.
+I'm a game designer, and I haven't implemented many ideas yet due to lack of time.
+If you are proficient in C# and are interested, please contact me on the rimworld discord.
+	
+[img]https://i.imgur.com/PwoNOj4.png[/img]
+[list]
+[*] See if the the error persists if you just have this mod and its requirements active.
+[*] If not, try adding your other mods until it happens again.
+[*] Post your error-log using [url=https://steamcommunity.com/workshop/filedetails/?id=818773962]HugsLib[/url] and command Ctrl+F12
+[*] For best support, please use the Discord-channel for error-reporting.
+[*] Do not report errors by making a discussion-thread, I get no notification of that.
+[*] If you have the solution for a problem, please post it to the GitHub repository.
+[/list]</description>
+</ModMetaData>

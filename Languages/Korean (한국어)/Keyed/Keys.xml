@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <val_elecCycle_t>선거 주기 (일)</val_elecCycle_t>
+  <val_elecCycle_d>X일 마다 새로운 지도자를 뽑습니다.</val_elecCycle_d>
+  <letter_candiList_t>선거후보</letter_candiList_t>
+  <letter_candiList_d>-- 후보자 --\n{0}\n-- 거부 --\n{1}\n\n며칠간 투표가 진행되고나서 결과가 발표될 것입니다.</letter_candiList_d>
+  <letter_election_t>투표결과</letter_election_t>
+  <letter_election_d>+ 새로운 지도자 : {0}\n+ 후보순위 : {1}\n\n[투표자] &gt;&gt;&gt;&gt;&gt; [투표대상]\n\n{2}\n\n{0}(은)는 정착지를 {3}일 동안 통치할 것입니다.</letter_election_d>
+  <letter_assist_t>지위배정</letter_assist_t>
+  <letter_assist_d>{0}(은)는 모든 지위에 원하는 인물을 배정하였습니다.\n자신이 좋아하는 사람에게 가능한 우선적으로 높은 지위를 배정했습니다.\n\n{1}</letter_assist_d>
+  <letter_elecFail_t>선거실패</letter_elecFail_t>
+  <letter_elecFail_colonistNum_d>정착민이 {0}명 미만이기 때문에, 선거가 취소되었습니다.</letter_elecFail_colonistNum_d>
+  <letter_elecFail_noCandi_d>후보가 사라져서 투표를 진행할 수 없습니다.</letter_elecFail_noCandi_d>
+  <systemEffectVote># 현재 {0}의 {1} 체제 아래 있기 때문에 다음에 해당되는 사람은 더 많은 표를 행사합니다.\n\n   {2}</systemEffectVote>
+  <c_mental>이성을 잃음</c_mental>
+  <c_lowMood>낮은 기분</c_lowMood>
+  <c_noInterest>관심없음</c_noInterest>
+  <c_guilt>범죄자</c_guilt>
+  <reason>이유</reason>
+  <r_impossible>출마 불가능</r_impossible>
+  <r_ideoSelf>자신의 신념</r_ideoSelf>
+  <r_self>자신</r_self>
+  <r_opinion>친밀함</r_opinion>
+  <r_social>사교능력</r_social>
+  <r_family>가족</r_family>
+  <r_love>사랑</r_love>
+  <r_ideo>같은신념</r_ideo>
+  <c_noCollect>알맞는 인물 없음</c_noCollect>
+  <vote>표</vote>
+  <Leader>지도자</Leader>
+</LanguageData>
