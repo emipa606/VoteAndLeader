@@ -65,8 +65,7 @@ public class core : ModBase
         val_elecCycle_s = Settings.GetHandle("val_elecCycle", "val_elecCycle_t".Translate(),
             "val_elecCycle_d".Translate(), 60);
         val_testMode_s = Settings.GetHandle<bool>("val_testMode", "test mode", "fast event");
-        val_debugMode_s = Settings.GetHandle<bool>("val_debugMode", "debug mode", "log, cheat");
-
+        //val_debugMode_s = Settings.GetHandle<bool>("val_debugMode", "debug mode", "log, cheat");
         SettingsChanged();
     }
 
@@ -77,7 +76,8 @@ public class core : ModBase
 
         val_testMode = val_testMode_s.Value;
 
-        val_debugMode = val_debugMode_s.Value;
+        //val_debugMode = val_debugMode_s.Value;
+        val_debugMode = false;
     }
 
     public override void WorldLoaded()

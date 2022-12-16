@@ -1,5 +1,8 @@
 # Changelog for VoteAndLeader
 
+1.4.1 - Removed the debug-mode. Was heavily broken.
+
+
 1.4.0 - First publish.
 Used DeepL to update translations for ChineseSimplified, French, German, Russian
 

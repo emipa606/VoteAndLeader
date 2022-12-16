@@ -66,14 +66,6 @@ Yayo's Youtube
 
 
 
-https://ko-fi.com/kr_yayo]![Image](https://i.imgur.com/d6Vx7Sj.png)
-
-I'm very erratic and I cannot update this in return for a donation.
-If you'd like to donate for something you're currently enjoying with the mod, I'd appreciate it.
-
-
-
-
 # **# Ideas not yet developed**
 
 
@@ -101,3 +93,4 @@ If you are proficient in C# and are interested, please contact me on the rimworl
 -  If you have the solution for a problem, please post it to the GitHub repository.
 
 
+https://steamcommunity.com/sharedfiles/filedetails/changelog/2896484287]Last updated 2022-12-16
