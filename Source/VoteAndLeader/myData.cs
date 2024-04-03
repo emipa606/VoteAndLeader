@@ -8,7 +8,7 @@ namespace election;
 public class myData : IExposable
 {
     public List<Pawn> _ar_candi;
-    public List<int> ar_candi_id = new List<int>();
+    public List<int> ar_candi_id = [];
     public int assistTick = -1;
     public int elecTick = -1;
 
@@ -25,7 +25,7 @@ public class myData : IExposable
                 return _ar_candi;
             }
 
-            _ar_candi = new List<Pawn>();
+            _ar_candi = [];
             foreach (var i in ar_candi_id)
             {
                 foreach (var p in PawnsFinder.AllMapsCaravansAndTravelingTransportPods_Alive_FreeColonists)
@@ -48,7 +48,7 @@ public class myData : IExposable
     {
         if (Scribe.mode == LoadSaveMode.Saving)
         {
-            ar_candi_id = new List<int>();
+            ar_candi_id = [];
             foreach (var p in ar_candi)
             {
                 ar_candi_id.Add(p.thingIDNumber);

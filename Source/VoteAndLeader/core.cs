@@ -15,11 +15,11 @@ public class core : ModBase
     public static bool val_debugMode;
 
 
-    public static int val_readyDay = 3;
+    public static readonly int val_readyDay = 3;
 
-    public static int val_problemDay = 1;
+    public static readonly int val_problemDay = 1;
 
-    public static int val_assistDay = 2;
+    public static readonly int val_assistDay = 2;
 
 
     // -----------------------------------------
@@ -31,8 +31,6 @@ public class core : ModBase
     private static List<pawnAndFloat> ar_score;
     private static Pawn p;
     private static List<pawnAndInt> ar_pi;
-    private static List<int> ar_int;
-    private static int i;
     private static float f;
     private static float f2;
     private static string str;
@@ -42,8 +40,6 @@ public class core : ModBase
     private static List<string> ar_string;
 
     private static bool flag;
-
-    private SettingHandle<bool> val_debugMode_s;
 
     private SettingHandle<int> val_elecCycle_s;
 
@@ -65,7 +61,6 @@ public class core : ModBase
         val_elecCycle_s = Settings.GetHandle("val_elecCycle", "val_elecCycle_t".Translate(),
             "val_elecCycle_d".Translate(), 60);
         val_testMode_s = Settings.GetHandle<bool>("val_testMode", "test mode", "fast event");
-        //val_debugMode_s = Settings.GetHandle<bool>("val_debugMode", "debug mode", "log, cheat");
         SettingsChanged();
     }
 
@@ -76,7 +71,6 @@ public class core : ModBase
 
         val_testMode = val_testMode_s.Value;
 
-        //val_debugMode = val_debugMode_s.Value;
         val_debugMode = false;
     }
 
@@ -160,19 +154,11 @@ public class core : ModBase
         {
             Log.Message("# try setCandi");
         }
-        //if (getColonists().Count < 3)
-        //{
-        //    // 정착민이 3명 미만임
-        //    data.readyTick = tickGame + (!val_testMode?(GenDate.TicksPerDay * val_problemDay):GenDate.TicksPerHour);
-        //    if (val_debugMode) Log.Message($"! can not make leader. colonists number is under 3");
-        //    return;
-        //}
-
 
         // 후보 등록
         str = "";
         str2 = "";
-        data.ar_candi = new List<Pawn>();
+        data.ar_candi = [];
         foreach (var pawn in getColonists())
         {
             if (!checkLeaderGenderRule(pawn, pawn, true))
@@ -276,21 +262,9 @@ public class core : ModBase
         {
             Log.Message("# try election");
         }
-        //if (getColonists().Count < 3)
-        //{
-        //    // 정착민이 3명 미만임
-        //    data.readyTick = tickGame + (!val_testMode ? (GenDate.TicksPerDay * val_problemDay) : GenDate.TicksPerHour);
-        //    Find.LetterStack.ReceiveLetter(
-        //        string.Format("letter_elecFail_t".Translate()),
-        //        string.Format("letter_elecFail_colonistNum_d".Translate(), 3.ToString()),
-        //        LetterDefOf.NegativeEvent
-        //    );
-        //    return;
-        //}
-
 
         // 후보 리스트 체크
-        ar_candi = new List<pawnAndInt>();
+        ar_candi = [];
         data.ar_candi.RemoveAll(a => a == null);
         data.ar_candi.RemoveAll(a => a.Dead || a.Destroyed);
         foreach (var pawn in data.ar_candi)
@@ -342,10 +316,10 @@ public class core : ModBase
                 }
 
 
-                ar_score = new List<pawnAndFloat>(); // 후보 점수 초기화
+                ar_score = []; // 후보 점수 초기화
                 foreach (var pi in ar_candi)
                 {
-                    ar_score.Add(new pawnAndFloat(pi.p, 0f));
+                    ar_score.Add(new pawnAndFloat(pi.P, 0f));
                 }
 
                 if (val_debugMode)
@@ -355,16 +329,16 @@ public class core : ModBase
 
                 foreach (var pi in ar_score)
                 {
-                    pi.f = getScore(voter, pi.p, out str2, false, SkillDefOf.Social);
+                    pi.F = getScore(voter, pi.P, out str2, false, SkillDefOf.Social);
                     if (val_debugMode)
                     {
-                        Log.Message($"{pi.p.NameShortColored} : {pi.f}");
+                        Log.Message($"{pi.P.NameShortColored} : {pi.F}");
                     }
                 }
 
-                p = ar_score.MaxBy(a => a.f).p; // 최고점수
+                p = ar_score.MaxBy(a => a.F).P; // 최고점수
                 var vote = getVoteNumOfPawn(voter);
-                ar_candi.Find(a => a.p == p).i += vote; // 투표
+                ar_candi.Find(a => a.P == p).I += vote; // 투표
 
                 getScore(voter, p, out str2, true, SkillDefOf.Social);
                 str +=
@@ -387,7 +361,7 @@ public class core : ModBase
         {
             if (val_debugMode)
             {
-                Log.Message($"{pi.p.NameShortColored} : {pi.i}");
+                Log.Message($"{pi.P.NameShortColored} : {pi.I}");
             }
         }
 
@@ -396,7 +370,7 @@ public class core : ModBase
 
 
         // 당선
-        p = ar_candi.Count >= 2 ? ar_candi.MaxBy(a => a.i).p : ar_candi[0].p;
+        p = ar_candi.Count >= 2 ? ar_candi.MaxBy(a => a.I).P : ar_candi[0].P;
 
         if (Leader != p)
         {
@@ -420,10 +394,10 @@ public class core : ModBase
         }
 
 
-        ar_string = new List<string>();
-        foreach (var pi in ar_candi.OrderByDescending(a => a.i).ToList())
+        ar_string = [];
+        foreach (var pi in ar_candi.OrderByDescending(a => a.I).ToList())
         {
-            ar_string.Add($"{pi.p.NameShortColored}({pi.i}{"vote".Translate()})");
+            ar_string.Add($"{pi.P.NameShortColored}({pi.I}{"vote".Translate()})");
         }
 
         str3 = string.Join(", ", ar_string);
@@ -499,19 +473,19 @@ public class core : ModBase
 
 
         // 배정시킬 폰 리스트, 순서
-        ar_pi = new List<pawnAndInt>();
+        ar_pi = [];
         foreach (var tmp_pawn in getColonists())
         {
             ar_pi.Add(new pawnAndInt(tmp_pawn, 0));
         }
 
-        ar_pi.RemoveAll(a => a.p == leader);
+        ar_pi.RemoveAll(a => a.P == leader);
         foreach (var pi in ar_pi)
         {
-            pi.i = (int)getScore(leader, pi.p, out str2, false, SkillDefOf.Social);
+            pi.I = (int)getScore(leader, pi.P, out str2, false, SkillDefOf.Social);
         }
 
-        ar_pi = new List<pawnAndInt>(ar_pi.OrderByDescending(a => a.i));
+        ar_pi = [..ar_pi.OrderByDescending(a => a.I)];
 
         // 직위 배정
         str = "";
@@ -529,7 +503,7 @@ public class core : ModBase
             flag = false;
             foreach (var pi in ar_pi)
             {
-                p = pi.p;
+                p = pi.P;
                 if (!r.RequirementsMet(p)) // 요구사항 체크
                 {
                     continue;
@@ -537,7 +511,7 @@ public class core : ModBase
 
                 flag = true;
                 r.Assign(p, true);
-                getScore(leader, pi.p, out str2, true);
+                getScore(leader, pi.P, out str2, true);
                 if (r.ideo != null)
                 {
                     str +=
@@ -617,20 +591,20 @@ public class core : ModBase
 
 
         // 배정시킬 폰 리스트, 순서
-        ar_pi = new List<pawnAndInt>();
+        ar_pi = [];
         foreach (var tmp_pawn in getColonists())
         {
             ar_pi.Add(new pawnAndInt(tmp_pawn, 0));
         }
 
-        ar_pi.RemoveAll(a => a.p == leader);
-        ar_pi.RemoveAll(a => a.p.Ideo.GetRole(a.p) != null);
+        ar_pi.RemoveAll(a => a.P == leader);
+        ar_pi.RemoveAll(a => a.P.Ideo.GetRole(a.P) != null);
         foreach (var pi in ar_pi)
         {
-            pi.i = (int)getScore(leader, pi.p, out str2, false, SkillDefOf.Social);
+            pi.I = (int)getScore(leader, pi.P, out str2, false, SkillDefOf.Social);
         }
 
-        ar_pi = new List<pawnAndInt>(ar_pi.OrderByDescending(a => a.i));
+        ar_pi = [..ar_pi.OrderByDescending(a => a.I)];
 
         // 직위 배정
         str = "";
@@ -648,7 +622,7 @@ public class core : ModBase
             flag = false;
             foreach (var pi in ar_pi)
             {
-                p = pi.p;
+                p = pi.P;
                 if (!r.RequirementsMet(p)) // 요구사항 체크
                 {
                     continue;
@@ -656,7 +630,7 @@ public class core : ModBase
 
                 flag = true;
                 r.Assign(p, true);
-                getScore(leader, pi.p, out str2, true);
+                getScore(leader, pi.P, out str2, true);
                 if (r.ideo != null)
                 {
                     str +=
@@ -696,7 +670,7 @@ public class core : ModBase
     {
         reason = "";
         f = 0f;
-        ar_string = new List<string>();
+        ar_string = [];
         var self = thinker == about;
 
 
@@ -823,7 +797,6 @@ public class core : ModBase
     {
         var ar = new List<Pawn>();
         ar.AddRange(PawnsFinder.AllMapsCaravansAndTravelingTransportPods_Alive_FreeColonists);
-        //ar.AddRange(Find.ColonistBar.GetColonistsInOrder());
         ar.RemoveAll(a => a == null);
         ar.RemoveAll(a => a.Dead || a.Destroyed);
         ar.RemoveAll(a => a.IsSlave);
@@ -835,11 +808,12 @@ public class core : ModBase
     }
 
 
-    private string get_systemEffectVote(Pawn p)
+    private string get_systemEffectVote(Pawn pawn)
     {
-        return p == null
+        return pawn == null
             ? ""
-            : string.Format("systemEffectVote".Translate(), p.NameShortColored, p.Ideo.name.Colorize(p.Ideo.Color),
+            : string.Format("systemEffectVote".Translate(), pawn.NameShortColored,
+                pawn.Ideo.name.Colorize(pawn.Ideo.Color),
                 get_str_benefitVotePeople());
     }
 
@@ -888,7 +862,7 @@ public class core : ModBase
     }
 
 
-    private int getVoteNumOfPawn(Pawn p)
+    private int getVoteNumOfPawn(Pawn pawn)
     {
         var n = 1;
 
@@ -897,17 +871,18 @@ public class core : ModBase
             return n;
         }
 
-        if (LeaderMemes.Contains(MemeDefOfY.Collectivist) && p == Leader)
+        if (LeaderMemes.Contains(MemeDefOfY.Collectivist) && pawn == Leader)
         {
             n += Mathf.Max(1, getColonists().Count / 4);
         }
 
-        if (LeaderMemes.Contains(MemeDefOfY.Proselytizer) && p.Ideo.GetRole(p)?.def.defName == "IdeoRole_Moralist")
+        if (LeaderMemes.Contains(MemeDefOfY.Proselytizer) &&
+            pawn.Ideo.GetRole(pawn)?.def.defName == "IdeoRole_Moralist")
         {
             n += 1;
         }
 
-        if (checkLeaderGenderRule(Leader, p))
+        if (checkLeaderGenderRule(Leader, pawn))
         {
             n += 1;
         }
@@ -915,19 +890,19 @@ public class core : ModBase
         return n;
     }
 
-    private static en_genderRule getPawnGenderRule(Pawn p)
+    private static en_genderRule getPawnGenderRule(Pawn pawn)
     {
-        if (p == null)
+        if (pawn == null)
         {
             return en_genderRule.equal;
         }
 
-        if (p.Ideo.memes.Contains(MemeDefOf.MaleSupremacy))
+        if (pawn.Ideo.memes.Contains(MemeDefOf.MaleSupremacy))
         {
             return en_genderRule.male;
         }
 
-        return p.Ideo.memes.Contains(MemeDefOf.FemaleSupremacy) ? en_genderRule.female : en_genderRule.equal;
+        return pawn.Ideo.memes.Contains(MemeDefOf.FemaleSupremacy) ? en_genderRule.female : en_genderRule.equal;
     }
 
     private bool checkLeaderGenderRule(Pawn thinker, Pawn about, bool defaultReturn = false)
@@ -944,28 +919,16 @@ public class core : ModBase
         }
     }
 
-    public class pawnAndInt
+    public class pawnAndInt(Pawn _p, int _i)
     {
-        public int i;
-        public Pawn p;
-
-        public pawnAndInt(Pawn _p, int _i)
-        {
-            p = _p;
-            i = _i;
-        }
+        public readonly Pawn P = _p;
+        public int I = _i;
     }
 
-    public class pawnAndFloat
+    public class pawnAndFloat(Pawn _p, float _f)
     {
-        public float f;
-        public Pawn p;
-
-        public pawnAndFloat(Pawn _p, float _f)
-        {
-            p = _p;
-            f = _f;
-        }
+        public readonly Pawn P = _p;
+        public float F = _f;
     }
 
 

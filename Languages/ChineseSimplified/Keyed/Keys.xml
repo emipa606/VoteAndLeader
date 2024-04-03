@@ -30,4 +30,6 @@
   <c_noCollect>没有合适的人</c_noCollect>
   <vote>投票</vote>
   <Leader>领导人</Leader>
+  <c_cannotLead>领导不了</c_cannotLead>
+  <r_cannotVote>不能投票</r_cannotVote>
 </LanguageData>

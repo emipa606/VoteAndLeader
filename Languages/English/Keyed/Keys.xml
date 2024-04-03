@@ -15,6 +15,7 @@
   <c_mental>Mental break</c_mental>
   <c_lowMood>Low mood</c_lowMood>
   <c_noInterest>No interested</c_noInterest>
+  <c_cannotLead>cannot lead</c_cannotLead>
   <c_guilt>Criminal</c_guilt>
   <reason>Reason</reason>
   <r_impossible>impossible</r_impossible>
@@ -22,6 +23,7 @@
   <r_self>myself</r_self>
   <r_opinion>intimacy</r_opinion>
   <r_social>social skill</r_social>
+  <r_cannotVote>cannot vote</r_cannotVote>
   <r_family>family</r_family>
   <r_love>lover</r_love>
   <r_ideo>same ideo</r_ideo>

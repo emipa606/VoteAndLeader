@@ -30,4 +30,6 @@
   <c_noCollect>Нет подходящего человека</c_noCollect>
   <vote>голосовать</vote>
   <Leader>Лидер</Leader>
+  <c_cannotLead>не может руководить</c_cannotLead>
+  <r_cannotVote>не может голосовать</r_cannotVote>
 </LanguageData>

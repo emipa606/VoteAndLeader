@@ -30,4 +30,6 @@
   <c_noCollect>Aucune personne appropriée</c_noCollect>
   <vote>vote</vote>
   <Leader>Leader</Leader>
+  <c_cannotLead>ne peut pas diriger</c_cannotLead>
+  <r_cannotVote>ne peut pas voter</r_cannotVote>
 </LanguageData>

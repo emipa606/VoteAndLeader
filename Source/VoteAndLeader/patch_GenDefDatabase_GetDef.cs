@@ -5,8 +5,7 @@ using Verse;
 
 namespace election;
 
-[HarmonyPatch(typeof(GenDefDatabase))]
-[HarmonyPatch("GetDef")]
+[HarmonyPatch(typeof(GenDefDatabase), nameof(GenDefDatabase.GetDef))]
 internal class patch_GenDefDatabase_GetDef
 {
     [HarmonyPostfix]

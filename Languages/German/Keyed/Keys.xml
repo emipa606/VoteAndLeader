@@ -30,4 +30,6 @@
   <c_noCollect>Keine geeignete Person</c_noCollect>
   <vote>Abstimmung</vote>
   <Leader>Anführer</Leader>
+  <c_cannotLead>kann nicht führen</c_cannotLead>
+  <r_cannotVote>kann nicht wählen</r_cannotVote>
 </LanguageData>
