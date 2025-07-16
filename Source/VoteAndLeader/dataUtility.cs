@@ -9,10 +9,7 @@ public static class dataUtility
 
     public static myData GetData()
     {
-        if (data == null)
-        {
-            data = new myData();
-        }
+        data ??= new myData();
 
         data.setParent(Find.World);
         return data;

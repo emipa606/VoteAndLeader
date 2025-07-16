@@ -1,11 +1,11 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
   <val_elecCycle_t>선거 주기 (일)</val_elecCycle_t>
   <val_elecCycle_d>X일 마다 새로운 지도자를 뽑습니다.</val_elecCycle_d>
   <letter_candiList_t>선거후보</letter_candiList_t>
   <letter_candiList_d>-- 후보자 --\n{0}\n-- 거부 --\n{1}\n\n며칠간 투표가 진행되고나서 결과가 발표될 것입니다.</letter_candiList_d>
   <letter_election_t>투표결과</letter_election_t>
-  <letter_election_d>+ 새로운 지도자 : {0}\n+ 후보순위 : {1}\n\n[투표자] &gt;&gt;&gt;&gt;&gt; [투표대상]\n\n{2}\n\n{0}(은)는 정착지를 {3}일 동안 통치할 것입니다.</letter_election_d>
+  <letter_election_d>+ 새로운 지도자 : {0}\n+ 후보순위 : {1}\n\n[투표자] >>>>> [투표대상]\n\n{2}\n\n{0}(은)는 정착지를 {3}일 동안 통치할 것입니다.</letter_election_d>
   <letter_assist_t>지위배정</letter_assist_t>
   <letter_assist_d>{0}(은)는 모든 지위에 원하는 인물을 배정하였습니다.\n자신이 좋아하는 사람에게 가능한 우선적으로 높은 지위를 배정했습니다.\n\n{1}</letter_assist_d>
   <letter_elecFail_t>선거실패</letter_elecFail_t>

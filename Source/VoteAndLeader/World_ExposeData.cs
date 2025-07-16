@@ -4,7 +4,7 @@ using RimWorld.Planet;
 namespace election;
 
 [HarmonyPatch(typeof(World), nameof(World.ExposeData))]
-public class patch_World_exposeData
+public class World_ExposeData
 {
     private static void Postfix()
     {

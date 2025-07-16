@@ -12,11 +12,4 @@ public class CompAbilityEffect_CheckAssist : CompAbilityEffect_WithDuration
         base.Apply(target, dest);
         core.setAssist();
     }
-
-    protected void ApplyInner(Pawn target, Pawn other)
-    {
-        if (target != null)
-        {
-        }
-    }
 }

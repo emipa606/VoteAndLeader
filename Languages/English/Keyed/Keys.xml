@@ -1,11 +1,11 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
   <val_elecCycle_t>Election cycle (days)</val_elecCycle_t>
   <val_elecCycle_d>Every X days, a new leader is elected.</val_elecCycle_d>
   <letter_candiList_t>Election Candidate</letter_candiList_t>
   <letter_candiList_d>-- Candidates --\n{0}\n-- Denied --\n{1}\n\nAfter a few days of voting, the results will be announced.</letter_candiList_d>
   <letter_election_t>Voting Result</letter_election_t>
-  <letter_election_d>+ New Leader: {0}\n+ Candidate Ranking: {1}\n\n[Vote] &gt;&gt;&gt;&gt;&gt; [Vote Target]\n\n{2}\n\nThe settlement will be ruled by {0} for {3} days.</letter_election_d>
+  <letter_election_d>+ New Leader: {0}\n+ Candidate Ranking: {1}\n\n[Vote] >>>>> [Vote Target]\n\n{2}\n\nThe settlement will be ruled by {0} for {3} days.</letter_election_d>
   <letter_assist_t>Role Assignment</letter_assist_t>
   <letter_assist_d>{0} has assigned the desired person to all roles.\nhave assigned the highest possible position to the person like.\n\n{1}</letter_assist_d>
   <letter_elecFail_t>Election fail</letter_elecFail_t>

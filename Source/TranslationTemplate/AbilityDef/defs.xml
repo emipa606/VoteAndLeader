@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: Assign roles -->
+  <SubAssignment.label>Assign roles</SubAssignment.label>
+  <!-- EN: Assign empty roles. -->
+  <SubAssignment.description>Assign empty roles.</SubAssignment.description>
+</LanguageData>

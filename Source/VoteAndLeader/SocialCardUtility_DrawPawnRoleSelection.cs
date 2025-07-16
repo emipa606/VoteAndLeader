@@ -7,12 +7,11 @@ using Verse;
 namespace election;
 
 [HarmonyPatch(typeof(SocialCardUtility), nameof(SocialCardUtility.DrawPawnRoleSelection))]
-internal class patch_SocialCardUtility_DrawPawnRoleSelection
+internal class SocialCardUtility_DrawPawnRoleSelection
 {
     private static readonly List<Precept_Role> cachedRoles = AccessTools
         .StaticFieldRefAccess<List<Precept_Role>>(AccessTools.Field(typeof(SocialCardUtility), "cachedRoles")).Invoke();
 
-    [HarmonyPostfix]
     private static bool Prefix(Pawn pawn, Rect rect, Vector2 ___RoleChangeButtonSize)
     {
         if (core.val_debugMode)

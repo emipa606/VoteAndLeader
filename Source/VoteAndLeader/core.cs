@@ -10,22 +10,22 @@ namespace election;
 
 public class core : ModBase
 {
-    public static int val_elecCycle;
-    public static bool val_testMode;
+    private static int val_elecCycle;
+    private static bool val_testMode;
     public static bool val_debugMode;
 
 
-    public static readonly int val_readyDay = 3;
+    private static readonly int val_readyDay = 3;
 
-    public static readonly int val_problemDay = 1;
+    private static readonly int val_problemDay = 1;
 
-    public static readonly int val_assistDay = 2;
+    private static readonly int val_assistDay = 2;
 
 
     // -----------------------------------------
 
     private static myData data;
-    public static int tickGame;
+    private static int tickGame;
     private static List<Pawn> ar_voter;
     private static List<pawnAndInt> ar_candi;
     private static List<pawnAndFloat> ar_score;
@@ -46,12 +46,12 @@ public class core : ModBase
     private SettingHandle<bool> val_testMode_s;
     public override string ModIdentifier => "election";
 
-    public static Faction PlayerFaction => Find.FactionManager.OfPlayer;
+    private static Faction PlayerFaction => Find.FactionManager.OfPlayer;
 
     public static Pawn Leader => PlayerFaction.leader == null ? null :
         !getColonists().Contains(PlayerFaction.leader) ? null : PlayerFaction.leader;
 
-    public List<MemeDef> LeaderMemes => PlayerFaction.leader == null ? null : Leader.Ideo.memes;
+    private List<MemeDef> LeaderMemes => PlayerFaction.leader == null ? null : Leader.Ideo.memes;
 
     private en_genderRule leaderGenderRule => Leader == null ? en_genderRule.equal :
         !getColonists().Contains(PlayerFaction.leader) ? en_genderRule.equal : getPawnGenderRule(PlayerFaction.leader);
@@ -796,7 +796,7 @@ public class core : ModBase
     private static List<Pawn> getColonists()
     {
         var ar = new List<Pawn>();
-        ar.AddRange(PawnsFinder.AllMapsCaravansAndTravelingTransportPods_Alive_FreeColonists);
+        ar.AddRange(PawnsFinder.AllMapsCaravansAndTravellingTransporters_Alive_FreeColonists);
         ar.RemoveAll(a => a == null);
         ar.RemoveAll(a => a.Dead || a.Destroyed);
         ar.RemoveAll(a => a.IsSlave);
@@ -919,13 +919,13 @@ public class core : ModBase
         }
     }
 
-    public class pawnAndInt(Pawn _p, int _i)
+    private class pawnAndInt(Pawn _p, int _i)
     {
         public readonly Pawn P = _p;
         public int I = _i;
     }
 
-    public class pawnAndFloat(Pawn _p, float _f)
+    private class pawnAndFloat(Pawn _p, float _f)
     {
         public readonly Pawn P = _p;
         public float F = _f;
