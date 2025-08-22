@@ -19,6 +19,7 @@
     <targetRequired>False</targetRequired>
     <canUseAoeToGetTargets>False</canUseAoeToGetTargets>
     <stunTargetWhileCasting>True</stunTargetWhileCasting>
+    <casterMustBeCapableOfViolence>False</casterMustBeCapableOfViolence>
     <showPsycastEffects>False</showPsycastEffects>
     <displayGizmoWhileUndrafted>True</displayGizmoWhileUndrafted>
     <disableGizmoWhileUndrafted>False</disableGizmoWhileUndrafted>
